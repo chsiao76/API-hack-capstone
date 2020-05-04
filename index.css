@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+ .footer {
+    max-width: 600px;
+    margin-top: 100px;
+    border-top: 1px solid black;
+ }
+ 
+  .hidden {
+    display: none;
+  }
