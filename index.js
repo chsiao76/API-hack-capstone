@@ -64,7 +64,7 @@ function getVideos(searchPhrase) {
 */
 
 function getVideos(searchPhrase) {
-  const url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=' + searchPhrase.split(' ').join('') + '&key=AIzaSyBe6w-01Mq_uiyg5MtZEe_5XtO23r8phAs' ;
+  const url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=' + searchPhrase.split(' ').join('') + '&key=AIzaSyBcXbNUU1Q8RmBsUGBaUlVoHCXpp00p2Qo' ;
   console.log(url) ;
   fetch(url)
     .then(response => {
@@ -88,7 +88,7 @@ function displayVideoResults(responseJson) {
   $('.video-results-list').empty();
   for (i = 0; i < 6; i++) {
     $('.video-results-list').append(
-      "<li><a href='http://www.youtube.com/watch?v=" + responseJson.items[i].id.videoId + "'>Video</a></li>,"
+      '<li><a href=' + '"http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">Video</a></li>,'
     )}; 
 };
 
