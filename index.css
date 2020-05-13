@@ -17,7 +17,7 @@
     max-width: 600px;
     border: 1px solid black;
     padding: 10px;
-    font-size: .75em;
+    font-size: .75em; 
     margin-top: 50px;
  }
  
@@ -33,4 +33,9 @@
   .results-list {
     color: indianred;
     margin-top: 35px;
+  }
+
+  .video-results {
+    margin-top: 30px;
+    margin-bottom: 10px;
   }

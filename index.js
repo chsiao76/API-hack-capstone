@@ -64,10 +64,12 @@ function getVideos(searchPhrase) {
 
 
 function displayVideoResults(responseJson) {
+  console.log(responseJson)
   $('.video-results-list').empty();
   for (let i = 0; i < 5; i++) {
     $('.video-results-list').append(
-      '<li><a target="_blank" href=' + '"http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">Video ' + [i+1] + '</a></li>'
+      '<li class="video-results"><a target="_blank" href=' + '"http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">' + responseJson.items[i].snippet.title + '</a></li>',
+      '<img alt="Video Resource" src="'+responseJson.items[i].snippet.thumbnails.default.url+'">'
     ); 
   }
 };
