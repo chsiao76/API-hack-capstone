@@ -67,7 +67,7 @@ function displayVideoResults(responseJson) {
   $('.video-results-list').empty();
   for (let i = 0; i < 5; i++) {
     $('.video-results-list').append(
-      '<li><a href=' + '"http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">Video ' + [i+1] + '</a></li>'
+      '<li><a target="_blank" href=' + '"http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">Video ' + [i+1] + '</a></li>'
     ); 
   }
 };

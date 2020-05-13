@@ -11,12 +11,26 @@
     margin: 0 auto;
   }
   
- .footer {
+
+
+ .attributes {
     max-width: 600px;
-    margin-top: 100px;
-    border-top: 1px solid black;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: .75em;
+    margin-top: 50px;
  }
  
   .hidden {
     display: none;
+  }
+
+  .videos {
+    list-style: none;
+    margin-top: 50px;
+  }
+
+  .results-list {
+    color: indianred;
+    margin-top: 35px;
   }
