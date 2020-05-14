@@ -45,7 +45,7 @@ function displayTaskResults(responseJson) {
 };
 
 function getVideos(searchPhrase) {
-  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${searchPhrase.replace(/ /g, '+')}&key=AIzaSyCUdJhw03j8wjwAgOig3eOa829KigfWPTs`
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${searchPhrase.replace(/ /g, '+')}&key=AIzaSyAfvxSwi0Q3RLPoWQurkyDed7IhHlWRYj0`
   fetch(url)
     .then(response => {
       console.log(`Success hitting youtube api`);
