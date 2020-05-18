@@ -34,7 +34,6 @@ function displayTaskResults(responseJson) {
     '<h3>'+responseJson.activity+'</h3>',
     '<li>Participants: '+responseJson.participants+'</li>',
     '<li>Type: '+responseJson.type+'</li>',
-    '<li>Price: '+responseJson.price+'</li>',
     '<li>Accessibility: '+responseJson.accessibility+'</li>'
     );
   $('.results').removeClass('hidden');
@@ -45,7 +44,7 @@ function displayTaskResults(responseJson) {
 };
 
 function getVideos(searchPhrase) {
-  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${searchPhrase.replace(/ /g, '+')}&key=AIzaSyAfvxSwi0Q3RLPoWQurkyDed7IhHlWRYj0`
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${searchPhrase.replace(/ /g, '+')}&key=AIzaSyBmpNNVF1UKDhquji8EBKSjDJdIgG5812U`
   fetch(url)
     .then(response => {
       console.log(`Success hitting youtube api`);
@@ -69,7 +68,9 @@ function displayVideoResults(responseJson) {
   for (let i = 0; i < 5; i++) {
     $('.video-results-list').append(
       '<li class="video-results"><a target="_blank" href=' + '"http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">' + responseJson.items[i].snippet.title + '</a></li>',
-      '<img alt="Video Resource" src="'+responseJson.items[i].snippet.thumbnails.default.url+'">'
+      '<a class="thumbnail" target="_blank" href="http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">' +
+      '<img alt="Video Resource" src="'+responseJson.items[i].snippet.thumbnails.default.url+'">'+
+      '</a>'
     ); 
   }
 };

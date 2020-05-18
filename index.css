@@ -2,40 +2,112 @@
     box-sizing: border-box;
   }
   
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
+
+html { 
+  background: url(calvin-and-hobbes-white-minimal-hd-1080P-wallpaper.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+h1 {
+  max-width: 1000px;
+  margin: 10px auto;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url(itl.cat_white-wallpaper-hd_41876.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
   
-  .container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 
- .attributes {
-    max-width: 600px;
-    border: 1px solid black;
-    padding: 10px;
-    font-size: .75em; 
-    margin-top: 50px;
- }
- 
-  .hidden {
-    display: none;
-  }
+form {
+  padding-bottom: 30px;
+  padding-top: 10px;
+  border-bottom: 1px black solid;
+}
 
+.attributes {
+  max-width: 600px;
+  border: 1px solid black;
+  padding: 10px;
+  font-size: .75em; 
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.videos {
+  list-style: none;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-top: black solid 1px;
+}
+
+.results-list {
+  color: indianred;
+  margin-top: 35px;
+  padding-bottom: 35px;
+  border: dotted 2px indianred;
+  max-width: 600px;
+}
+
+.video-results {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.video-results-list {
+  list-style: decimal;
+
+}
+
+@media screen and (min-width:1600px) {
   .videos {
-    list-style: none;
-    margin-top: 50px;
+    float: right;
+    border-top: none;
+    border-left: solid 1px black;
+    padding-left: 30px;
+    margin-right: 50px;
   }
 
-  .results-list {
-    color: indianred;
-    margin-top: 35px;
+
+  .container {
+    display: inline-block;
+    max-width: 600px;
+    margin-left: 150px;
   }
 
-  .video-results {
-    margin-top: 30px;
-    margin-bottom: 10px;
+}
+
+
+@media screen and (min-width:2000px) {
+  .videos {
+    float: right;
+    margin-right: 100px;
+    border-top: none;
+    border-left: solid 1px black;
+    padding-left: 30px;
   }
+
+
+  .container {
+    display: inline-block;
+    max-width: 600px;
+    margin-left: 300px;
+  }
+
+}
