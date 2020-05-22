@@ -31,9 +31,9 @@ function displayTaskResults(responseJson) {
   //console.log(responseJson);
   $('.results-list').empty();
   $('.results-list').append(
-    '<h3>'+responseJson.activity+'</h3>',
+    '<h3>'+responseJson.activity.toUpperCase()+'</h3>',
     '<li>Participants: '+responseJson.participants+'</li>',
-    '<li>Type: '+responseJson.type+'</li>',
+    '<li>Type: '+responseJson.type.charAt(0).toUpperCase()+responseJson.type.slice(1)+'</li>',
     '<li>Accessibility: '+responseJson.accessibility+'</li>'
     );
   $('.results').removeClass('hidden');

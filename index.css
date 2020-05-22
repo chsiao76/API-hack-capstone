@@ -1,28 +1,21 @@
 * {
     box-sizing: border-box;
   }
-  
 
-html { 
-  background: url(calvin-and-hobbes-white-minimal-hd-1080P-wallpaper.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
+  html {
+    background-color: gainsboro;
+  }
 
 h1 {
   max-width: 1000px;
   margin: 10px auto;
+  font-family: 'Chelsea Market', cursive;
+  font-size: 45px;
 }
 
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-image: url(itl.cat_white-wallpaper-hd_41876.png);
-  background-position: bottom right;
-  background-repeat: no-repeat;
+  font-family: 'Lato', sans-serif;
 }
   
 .container {
@@ -34,7 +27,6 @@ body {
 form {
   padding-bottom: 30px;
   padding-top: 10px;
-  border-bottom: 1px black solid;
 }
 
 .attributes {
@@ -54,15 +46,16 @@ form {
   list-style: none;
   max-width: 1000px;
   margin: 0 auto;
-  border-top: black solid 1px;
 }
 
 .results-list {
-  color: indianred;
-  margin-top: 35px;
+  color: darkred;
   padding-bottom: 35px;
-  border: dotted 2px indianred;
+  padding-top: 15px;
   max-width: 600px;
+  list-style: none;
+  margin: auto;
+  border: 1px dotted darkred;
 }
 
 .video-results {
@@ -75,39 +68,53 @@ form {
 
 }
 
+.attribute-list {
+  list-style: none;
+  font-size: 12px;
+}
+
+.tasks .results {
+  border: 2px solid black;
+  padding: 40px;
+  opacity: 1;
+  text-align: center;
+  background-image: url(calvin-and-hobbes-white-minimal-hd-wallpaper-preview.jpg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.attribute-heading {
+
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+p {
+  font-size: 12px;
+}
+
+.top {
+padding-bottom: 20px;
+}
+
 @media screen and (min-width:1600px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
   .videos {
-    float: right;
     border-top: none;
-    border-left: solid 1px black;
-    padding-left: 30px;
-    margin-right: 50px;
+    border-left: solid black 1px;
+    padding-left: 20px;
   }
-
-
-  .container {
-    display: inline-block;
-    max-width: 600px;
-    margin-left: 150px;
-  }
-
 }
 
-
-@media screen and (min-width:2000px) {
-  .videos {
-    float: right;
-    margin-right: 100px;
-    border-top: none;
-    border-left: solid 1px black;
-    padding-left: 30px;
+  .tasks .results {
+    margin: 0;
+    padding-left: 140px;
+    padding-right: 140px;
   }
 
-
-  .container {
-    display: inline-block;
-    max-width: 600px;
-    margin-left: 300px;
-  }
-
-}
