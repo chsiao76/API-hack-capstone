@@ -44,7 +44,7 @@ function displayTaskResults(responseJson) {
 };
 
 function getVideos(searchPhrase) {
-  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${searchPhrase.replace(/ /g, '+')}&key=AIzaSyBmpNNVF1UKDhquji8EBKSjDJdIgG5812U`
+  const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q=${searchPhrase.replace(/ /g, '+')}&key=AIzaSyD8Ih1gae_PGKZLiDvhSILo2fEzsgzr1Uk`
   fetch(url)
     .then(response => {
       console.log(`Success hitting youtube api`);
@@ -67,7 +67,7 @@ function displayVideoResults(responseJson) {
   $('.video-results-list').empty();
   for (let i = 0; i < 5; i++) {
     $('.video-results-list').append(
-      '<li class="video-results"><a target="_blank" href=' + '"http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">' + responseJson.items[i].snippet.title + '</a></li>',
+      '<li class="video-results"><a target="_blank" href=' + '"http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">' + responseJson.items[i].snippet.title.toUpperCase() + '</a></li>',
       '<a class="thumbnail" target="_blank" href="http://www.youtube.com/watch?v=' + responseJson.items[i].id.videoId + '">' +
       '<img alt="Video Resource" src="'+responseJson.items[i].snippet.thumbnails.default.url+'">'+
       '</a>'
