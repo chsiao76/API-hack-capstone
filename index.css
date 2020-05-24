@@ -71,6 +71,7 @@ form {
 .attribute-list {
   list-style: none;
   font-size: 12px;
+  padding: 0;
 }
 
 .tasks .results {
@@ -82,7 +83,6 @@ form {
 }
 
 .attribute-heading {
-
   padding-top: 30px;
   font-size: 14px;
 }
